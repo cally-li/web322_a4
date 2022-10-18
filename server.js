@@ -118,11 +118,6 @@ app.post("/student/update", (req, res) => {
     .catch((err)=>res.json( {message : err}));
 });
 
-app.get("/intlstudents", function(req,res){
-    dataService.getInternationalStudents()
-    .then((data)=>res.json(data)) 
-    .catch((err)=>res.json( {message : err}));
-});
 
 app.get("/programs", function(req,res){
     dataService.getPrograms()
