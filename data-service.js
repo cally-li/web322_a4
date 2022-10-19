@@ -99,6 +99,7 @@ module.exports.getPrograms= function(){
     })
 }
 
+
 module.exports.addStudent = function(studentData){    //studentData=req.body 
     return new Promise(function(resolve, reject){
         if (!studentData.isInternationalStudent){

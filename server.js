@@ -129,7 +129,7 @@ app.get("/students/add", function(req,res){
     res.render('addStudent');
 });
 
-app.post("/students/add", upload.single("imageFile"), (req, res) => {
+app.post("/students/add", (req, res) => {
     dataService.addStudent(req.body)
     .then(()=>res.redirect("/students")) 
     .catch((err)=>res.json( {message : err}));
